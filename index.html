@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Surprise</title>
+<title>Notification</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body{
@@ -20,32 +20,25 @@ body{
     max-width:420px;
     padding:40px;
 }
-h1{font-size:28px;}
-#msg{font-size:24px;margin-top:20px;}
-.small{margin-top:30px;font-size:14px;color:#aaa;}
+h1{font-size:26px;}
+#msg{font-size:22px;margin-top:20px;}
+.note{margin-top:28px;font-size:14px;color:#aaa;}
 </style>
 </head>
 <body>
 
 <div class="box">
     <h1>Vérification en cours…</h1>
-    <div id="msg">Analyse du QR code…</div>
-    <div id="final" class="small" style="display:none;">
-        😄 Blague ! Ce QR code ne donne aucun lot.<br>
-        Juste un petit moment de suspense.
-    </div>
+    <div id="msg">Analyse du lien…</div>
+    <div class="note">Page de démonstration / animation visuelle.</div>
 </div>
 
 <script>
-setTimeout(()=>{ msg.innerHTML="Connexion au lot…"; },2000);
-setTimeout(()=>{ msg.innerHTML="Résultat prêt…"; },4000);
+setTimeout(()=>{ msg.innerHTML="Connexion établie…"; },2000);
+setTimeout(()=>{ msg.innerHTML="Résultat prêt."; },4000);
 setTimeout(()=>{
-    msg.innerHTML="🎧 « Vous avez gagné… »";
+    msg.innerHTML="🎉 Félicitations !";
 },6000);
-setTimeout(()=>{
-    msg.style.display="none";
-    final.style.display="block";
-},8000);
 </script>
 
 </body>
